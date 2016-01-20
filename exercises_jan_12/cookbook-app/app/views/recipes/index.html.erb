@@ -1,11 +1,16 @@
 <h1> Cookbook </h1>
 
-<%= link_to "Add a new recipe", "recipes/new/" %>
-
+i
+<div class="row">
 <% @recipes.each do |recipe| %>
-  <h2><%= recipe.title %></h2>
-  <h2><%= recipe.chef %></h2>
-  <h3><%= recipe.ingredients %></h3>
-  <h3><%= recipe.directions %></h3>
-
+  <div class="col-md-offset-1 col-md-3  list-view">
+    <div class="thumbnail">
+  <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a></h3>
+    <h3><%= recipe.chef %></h3>
+    <h3><%= recipe.ingredients %></h3>
+    <h3><%= recipe.directions %></h3>
+    <%= image_tag recipe.image, width: 300, class: "image-responsive" %>
+   </div> 
+  </div>
   <% end %> 
+</div>

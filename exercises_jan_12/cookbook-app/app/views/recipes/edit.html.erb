@@ -19,7 +19,12 @@
 
   <div>
   <%= label_tag :directions %>
-  <%= text_field_tag :directions, @recipes.directions %>
+  <%= text_field_tag :directions, @recipe.directions %>
+  </div>
+
+   <div>
+  <%= label_tag :image %>
+  <%= text_field_tag :image, @recipe.image %>
   </div>
 
   <%= submit_tag 'Update this recipe' %>
